@@ -10,7 +10,7 @@ const Login = () => {
 
   const navigate = useNavigate()
 
-  const PASS = "pepe123"
+  const PASS = "chatui"
 
   useEffect(() => {
     const isLoggedIn = localStorage.getItem("isLoggedIn")
@@ -50,7 +50,7 @@ const Login = () => {
       <form onSubmit={handleSubmit}>
         <label>Contraseña de acceso</label>
         <input
-          placeholder="Ingrese la contraseña"
+          placeholder="(contraseña: chatui)"
           type={showPassword ? "text" : "password"}
           onChange={(event) => setPassword(event.target.value)}
         />
