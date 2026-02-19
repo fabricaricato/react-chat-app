@@ -2,9 +2,9 @@
 
 # WhatsApp Web Clone
 
-**Aplicación de mensajería en tiempo real inspirada en WhatsApp Web**
+**Real-time messaging application inspired by WhatsApp Web**
 
-Desarrollada con **React 19** · **Vite 7** · **React Router DOM 7**
+Built with **React 19** · **Vite 7** · **React Router DOM 7**
 
 [![React](https://img.shields.io/badge/React-19.1-61DAFB?logo=react&logoColor=white)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-7.1-646CFF?logo=vite&logoColor=white)](https://vite.dev/)
@@ -14,157 +14,157 @@ Desarrollada con **React 19** · **Vite 7** · **React Router DOM 7**
 
 ---
 
-## 📖 Descripción
+## 📖 Description
 
-Este proyecto es un **clon simplificado de WhatsApp Web**, desarrollado como trabajo final del primer módulo de _Front-End Developer_ en la **UTN**.
+This project is a **simplified WhatsApp Web clone**, developed as the final project for the first _Front-End Developer_ module at **UTN**.
 
-La aplicación permite a los usuarios iniciar sesión, ver contactos disponibles, y chatear en una interfaz limpia e intuitiva que replica la experiencia de WhatsApp Web. Implementa componentes reutilizables, gestión de estado global con Context API, un sistema de temas (modo claro/oscuro), soporte multilenguaje (español/inglés) y navegación protegida por rutas.
-
----
-
-## ✨ Funcionalidades
-
-| Funcionalidad                     | Descripción                                                |
-| --------------------------------- | ---------------------------------------------------------- |
-| 💬 **Chat en tiempo real**        | Envío y visualización de mensajes con marca de tiempo      |
-| 🔐 **Login protegido**            | Autenticación simulada con contraseña y rutas protegidas   |
-| 🌙 **Modo claro / oscuro**        | Cambio de tema persistente vía `localStorage`              |
-| 🌐 **Multilenguaje (ES / EN)**    | Cambio de idioma completo persistente vía `localStorage`   |
-| 🔍 **Búsqueda de contactos**      | Filtrado de usuarios en tiempo real desde la barra lateral |
-| 🖼️ **Galería de imágenes**        | Galería con vista modal para previsualizar imágenes        |
-| ❓ **Centro de ayuda**            | Página informativa con documentación de la app             |
-| 📱 **Diseño responsive**          | Interfaz adaptable a dispositivos móviles y escritorio     |
-| 👁️ **Mostrar/ocultar contraseña** | Toggle de visibilidad en el campo de contraseña            |
+The application allows users to log in, view available contacts, and chat through a clean and intuitive interface that replicates the WhatsApp Web experience. It implements reusable components, global state management with Context API, a theme system (light/dark mode), multi-language support (Spanish/English), and navigation protected by routes.
 
 ---
 
-## �️ Stack tecnológico
+## ✨ Features
 
-| Tecnología                                                                        | Uso                                |
-| --------------------------------------------------------------------------------- | ---------------------------------- |
-| [React 19](https://react.dev/)                                                    | Biblioteca principal para la UI    |
-| [Vite 7](https://vite.dev/)                                                       | Bundler y servidor de desarrollo   |
-| [React Router DOM 7](https://reactrouter.com/)                                    | Enrutamiento y navegación SPA      |
-| [Context API](https://react.dev/reference/react/createContext)                    | Estado global (chat, tema, idioma) |
-| [ESLint 9](https://eslint.org/)                                                   | Linting y calidad de código        |
-| [Font Awesome 6](https://fontawesome.com/)                                        | Iconografía                        |
-| [localStorage](https://developer.mozilla.org/es/docs/Web/API/Window/localStorage) | Persistencia de datos del cliente  |
-| [Vercel](https://vercel.com/)                                                     | Despliegue en producción           |
+| Feature                         | Description                                                 |
+| ------------------------------- | ----------------------------------------------------------- |
+| 💬 **Real-time chat**           | Sending and displaying messages with timestamps             |
+| 🔐 **Protected login**          | Simulated authentication with password and protected routes |
+| 🌙 **Light / dark mode**        | Persistent theme switching via `localStorage`               |
+| 🌐 **Multi-language (ES / EN)** | Full persistent language switching via `localStorage`       |
+| 🔍 **Contact search**           | Real-time user filtering from the sidebar                   |
+| 🖼️ **Image gallery**            | Gallery with modal view for image previewing                |
+| ❓ **Help center**              | Informational page with app documentation                   |
+| 📱 **Responsive design**        | Interface adaptable to mobile and desktop devices           |
+| 👁️ **Show/hide password**       | Visibility toggle on the password field                     |
 
 ---
 
-## 📂 Estructura del proyecto
+## 🛠️ Tech Stack
+
+| Technology                                                                           | Usage                                |
+| ------------------------------------------------------------------------------------ | ------------------------------------ |
+| [React 19](https://react.dev/)                                                       | Main UI library                      |
+| [Vite 7](https://vite.dev/)                                                          | Bundler and development server       |
+| [React Router DOM 7](https://reactrouter.com/)                                       | SPA routing and navigation           |
+| [Context API](https://react.dev/reference/react/createContext)                       | Global state (chat, theme, language) |
+| [ESLint 9](https://eslint.org/)                                                      | Linting and code quality             |
+| [Font Awesome 6](https://fontawesome.com/)                                           | Iconography                          |
+| [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) | Client-side data persistence         |
+| [Vercel](https://vercel.com/)                                                        | Production deployment                |
+
+---
+
+## 📂 Project Structure
 
 ```
 react-chat-app/
-├── public/                         # Archivos públicos estáticos
+├── public/                         # Static public files
 │
-├── src/                            # Código fuente principal
-│   ├── assets/                     # Recursos estáticos
+├── src/                            # Main source code
+│   ├── assets/                     # Static resources
 │   │   └── images/
-│   │       ├── avatar.jpeg         # Avatar por defecto
-│   │       └── logo.png            # Logo de la aplicación
+│   │       ├── avatar.jpeg         # Default avatar
+│   │       └── logo.png            # Application logo
 │   │
-│   ├── components/                 # Componentes reutilizables
-│   │   ├── Chat.jsx                # Interfaz principal del chat
-│   │   ├── ProtectedRoute.jsx      # HOC para rutas protegidas
-│   │   └── Sidebar.jsx             # Barra lateral con contactos
+│   ├── components/                 # Reusable components
+│   │   ├── Chat.jsx                # Main chat interface
+│   │   ├── ProtectedRoute.jsx      # HOC for protected routes
+│   │   └── Sidebar.jsx             # Sidebar with contacts
 │   │
-│   ├── context/                    # Providers de Context API
-│   │   ├── ChatContext.jsx         # Estado global: usuarios y mensajes
-│   │   ├── LanguageContext.jsx     # Estado global: idioma (es/en)
-│   │   └── ThemeContext.jsx        # Estado global: tema (light/dark)
+│   ├── context/                    # Context API Providers
+│   │   ├── ChatContext.jsx         # Global state: users and messages
+│   │   ├── LanguageContext.jsx     # Global state: language (es/en)
+│   │   └── ThemeContext.jsx        # Global state: theme (light/dark)
 │   │
-│   ├── router/                     # Configuración de rutas
-│   │   └── RouterApp.jsx           # Definición de rutas de la app
+│   ├── router/                     # Route configuration
+│   │   └── RouterApp.jsx           # App route definitions
 │   │
-│   ├── views/                      # Páginas / vistas
-│   │   ├── Gallery.jsx             # Galería de imágenes con modal
-│   │   ├── Help.jsx                # Centro de ayuda
-│   │   ├── Login.jsx               # Inicio de sesión
-│   │   ├── Messages.jsx            # Página principal de mensajes
-│   │   └── NotFound.jsx            # Página 404
+│   ├── views/                      # Pages / views
+│   │   ├── Gallery.jsx             # Image gallery with modal
+│   │   ├── Help.jsx                # Help center
+│   │   ├── Login.jsx               # Login page
+│   │   ├── Messages.jsx            # Main messages page
+│   │   └── NotFound.jsx            # 404 page
 │   │
-│   ├── index.css                   # Estilos globales
-│   ├── main.jsx                    # Punto de entrada de React
-│   └── translations.js             # Traducciones (ES / EN)
+│   ├── index.css                   # Global styles
+│   ├── main.jsx                    # React entry point
+│   └── translations.js             # Translations (ES / EN)
 │
 ├── .gitignore
-├── eslint.config.js                # Configuración de ESLint
-├── index.html                      # Plantilla HTML base
-├── package.json                    # Dependencias y scripts
-├── vercel.json                     # Configuración de despliegue (Vercel)
-├── vite.config.js                  # Configuración de Vite
+├── eslint.config.js                # ESLint configuration
+├── index.html                      # Base HTML template
+├── package.json                    # Dependencies and scripts
+├── vercel.json                     # Deployment configuration (Vercel)
+├── vite.config.js                  # Vite configuration
 └── README.md
 ```
 
 ---
 
-## 🚀 Primeros pasos
+## 🚀 Getting Started
 
-### Prerrequisitos
+### Prerequisites
 
 - [Node.js](https://nodejs.org/) **v18+**
-- [npm](https://www.npmjs.com/) **v9+** (incluido con Node.js)
+- [npm](https://www.npmjs.com/) **v9+** (included with Node.js)
 
-### Instalación
+### Installation
 
 ```bash
-# 1. Clonar el repositorio
+# 1. Clone the repository
 git clone https://github.com/tu-usuario/react-chat-app.git
 
-# 2. Entrar al directorio del proyecto
+# 2. Navigate to the project directory
 cd react-chat-app
 
-# 3. Instalar dependencias
+# 3. Install dependencies
 npm install
 
-# 4. Iniciar el servidor de desarrollo
+# 4. Start the development server
 npm run dev
 ```
 
-La aplicación estará disponible en `http://localhost:5173`.
+The application will be available at `http://localhost:5173`.
 
-### Scripts disponibles
+### Available Scripts
 
-| Comando           | Descripción                                         |
-| ----------------- | --------------------------------------------------- |
-| `npm run dev`     | Inicia el servidor de desarrollo con hot reload     |
-| `npm run build`   | Genera el build de producción en `/dist`            |
-| `npm run preview` | Previsualiza el build de producción                 |
-| `npm run lint`    | Ejecuta ESLint para verificar la calidad del código |
-
----
-
-## 🗺️ Rutas de la aplicación
-
-| Ruta       | Vista                     | Acceso      |
-| ---------- | ------------------------- | ----------- |
-| `/`        | Login                     | 🔓 Pública  |
-| `/chat`    | Mensajes (Chat + Sidebar) | � Protegida |
-| `/help`    | Centro de ayuda           | 🔓 Pública  |
-| `/gallery` | Galería de imágenes       | 🔓 Pública  |
-| `*`        | Página 404                | 🔓 Pública  |
-
-> **Nota:** La contraseña de acceso es `chatui`.
+| Command           | Description                                   |
+| ----------------- | --------------------------------------------- |
+| `npm run dev`     | Starts the development server with hot reload |
+| `npm run build`   | Generates the production build in `/dist`     |
+| `npm run preview` | Previews the production build                 |
+| `npm run lint`    | Runs ESLint to check code quality             |
 
 ---
 
-## 🧩 Arquitectura de contextos
+## 🗺️ Application Routes
 
-La aplicación utiliza tres providers anidados que envuelven toda la app:
+| Route      | View                      | Access       |
+| ---------- | ------------------------- | ------------ |
+| `/`        | Login                     | 🔓 Public    |
+| `/chat`    | Messages (Chat + Sidebar) | 🔒 Protected |
+| `/help`    | Help center               | 🔓 Public    |
+| `/gallery` | Image gallery             | 🔓 Public    |
+| `*`        | 404 Page                  | 🔓 Public    |
+
+> **Note:** The access password is `chatui`.
+
+---
+
+## 🧩 Context Architecture
+
+The application uses three nested providers that wrap the entire app:
 
 ```
-<ThemeProvider>          →  Gestiona el tema (light/dark)
-  <ChatProvider>         →  Gestiona usuarios, mensajes y selección
-    <LanguageProvider>   →  Gestiona el idioma (es/en)
-      <RouterApp />      →  Rutas de la aplicación
+<ThemeProvider>          →  Manages the theme (light/dark)
+  <ChatProvider>         →  Manages users, messages, and selection
+    <LanguageProvider>   →  Manages the language (es/en)
+      <RouterApp />      →  Application routes
     </LanguageProvider>
   </ChatProvider>
 </ThemeProvider>
 ```
 
-Cada contexto expone un hook personalizado para acceder a su estado:
+Each context exposes a custom hook to access its state:
 
 - `useTheme()` — `{ theme, toggleTheme, setTheme }`
 - `useChat()` — `{ users, setUsers, selectedUser, setSelectedUser }`
@@ -172,9 +172,9 @@ Cada contexto expone un hook personalizado para acceder a su estado:
 
 ---
 
-## ☁️ Despliegue
+## ☁️ Deployment
 
-El proyecto está configurado para desplegarse en **Vercel** con reescritura de rutas SPA:
+The project is configured for deployment on **Vercel** with SPA route rewrites:
 
 ```json
 {
@@ -182,31 +182,31 @@ El proyecto está configurado para desplegarse en **Vercel** con reescritura de 
 }
 ```
 
-Para desplegar:
+To deploy:
 
 ```bash
-# Instalar Vercel CLI (si no está instalado)
+# Install Vercel CLI (if not already installed)
 npm i -g vercel
 
-# Desplegar
+# Deploy
 vercel
 ```
 
 ---
 
-## 🔮 Mejoras futuras
+## 🔮 Future Improvements
 
-- [ ] Integración con base de datos real (Firebase / Supabase)
-- [ ] Autenticación real con JWT o OAuth
-- [ ] Envío de imágenes, audios y archivos
-- [ ] Notificaciones en tiempo real con WebSockets
-- [ ] Indicador de "escribiendo..."
-- [ ] Lectura de mensajes (doble check azul)
+- [ ] Integration with a real database (Firebase / Supabase)
+- [ ] Real authentication with JWT or OAuth
+- [ ] Sending images, audio, and files
+- [ ] Real-time notifications with WebSockets
+- [ ] "Typing..." indicator
+- [ ] Message read receipts (blue double check)
 
 ---
 
-## 🧑‍💻 Autor
+## 🧑‍💻 Author
 
 **Fabrizio Caricato**
 
-Proyecto desarrollado como trabajo final del primer módulo de _Front-End Developer_ en la **UTN**.
+Project developed as the final project for the first _Front-End Developer_ module at **UTN**.
